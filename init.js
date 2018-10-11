@@ -8,9 +8,9 @@ require('./models');
 process.on('uncaughtException', (err) => {
   // logger.info(err);
 });
-
+const url = 'mongodb://admin:admin123@ds223253.mlab.com:23253/forum';
 mongoose.Promise = Promise;
-mongoose.connect(envConf.mongodb, {
+mongoose.connect(url, {
   useCreateIndex: true,
   useNewUrlParser: true,
   poolSize: 10,
