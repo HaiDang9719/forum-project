@@ -52,7 +52,7 @@ app.use('/service', require('./routes/main'));
 // 	console.log("App running on port "+ PORT);
 // });
 const port = process.env.PORT || 8000;
-app.listen(port,"0.0.0.0",() => {
+app.listen(port,'0.0.0.0',() => {
     console.log("App is running on port " + port);
 });
 
