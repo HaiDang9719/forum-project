@@ -39,11 +39,11 @@ app.use(passport.session());
 
 // Routing
 var main = require('./routes/mainRoute');
-// var thread = require('./routes/threadRoute');
-// var auth = require('./routes/auth')(passport);
-// app.use('/',main);
-// app.use('/forum',thread);
-// app.use('/auth',auth);
+var thread = require('./routes/threadRoute');
+var auth = require('./routes/auth')(passport);
+app.use('/',main);
+app.use('/forum',thread);
+app.use('/auth',auth);
 // app.use('/service', require('./routes/main'));
 
 // Start the server
