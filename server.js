@@ -51,9 +51,8 @@ app.use('/service', require('./routes/main'));
 // http.createServer(app).listen(process.env.PORT || 8000, process.env.YOUR_HOST || '0.0.0.0',function(){
 // 	console.log("App running on port "+ PORT);
 // });
-const port = process.env.PORT || 8000;
-app.listen(port,'0.0.0.0',() => {
-    console.log("App is running on port " + port);
-});
+server = http.createServer(app);
 
-module.exports = app;
+server.listen(process.env.PORT || 8000);
+
+
