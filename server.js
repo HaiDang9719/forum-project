@@ -53,6 +53,6 @@ app.use('/service', require('./routes/main'));
 // });
 server = http.createServer(app);
 
-server.listen(process.env.PORT || 8000);
+server.listen(process.env.PORT);
 
 
