@@ -47,9 +47,13 @@ app.use('/auth',auth);
 app.use('/service', require('./routes/main'));
 
 // Start the server
-const PORT = process.env.PORT || 8000;
-http.createServer(app).listen(process.env.PORT || 8000, process.env.YOUR_HOST || '0.0.0.0',function(){
-	console.log("App running on port "+ PORT);
+// const PORT = process.env.PORT || 8000;
+// http.createServer(app).listen(process.env.PORT || 8000, process.env.YOUR_HOST || '0.0.0.0',function(){
+// 	console.log("App running on port "+ PORT);
+// });
+const port = process.env.PORT || 8000;
+app.listen(port, () => {
+    console.log("App is running on port " + port);
 });
 
 module.exports = app;
